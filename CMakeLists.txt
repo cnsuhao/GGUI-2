@@ -37,7 +37,6 @@ add_subdirectory (include)
 if (UNIX)
 	# target_link_libraries(${ExeName} lGL lGLEW lSDL2 lSDL2main)	
 	#SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -lGL -lGLEW -lSDL2 -lSDL2main" )	
-
 find_package (SDL2 REQUIRED)
 	if (SDL2_FOUND)
 	  MESSAGE("Include: ${SDL2_INCLUDE_DIRS}.")
