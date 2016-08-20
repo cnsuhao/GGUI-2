@@ -3,9 +3,9 @@
 
 // Input vertex data, different for all executions of this shader.
 //layout(location = 0) in float position[3];
-layout(location = 0) in vec3 position;
-layout(location = 1) in vec2 texcoords;
-layout(location = 2) in vec3 normal;
+in vec3 position;
+in vec2 texcoords;
+in vec3 normal;
 
 //Out variables
 //out vec3 positionWorld;

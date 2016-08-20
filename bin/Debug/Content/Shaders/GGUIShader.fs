@@ -1,5 +1,5 @@
 #version 410
-precision highp float;
+//precision highp float;
 
 //Varying variables
 in vec2 UV0;
@@ -23,7 +23,7 @@ uniform float FontHeight;
 uniform sampler2D diffuse;
 
 // Ouput data
-layout(location = 0) out highp vec4 color;
+out vec4 color;
 
 #define minval 0.0025
 #define maxval 0.9975
