@@ -30,9 +30,13 @@ void GameWindow::Run()
 	while (Globals::curGamestate != EXIT)
 	{
 		//Frame start time
-#if _WIN32
+#ifdef _WIN32
 		unsigned int frameStartTime = clock();
-#endif // _WIN32
+#elif __APPLE__
+        struct timeval frameStartTime, frameEndTime;
+        gettimeofday(&frameStartTime, NULL);
+        
+#endif
 
 		ProcessInput();
 		Update();
@@ -61,17 +65,20 @@ void GameWindow::Run()
 			//cout << "Time: " << clock() << endl;
 		}
 
-#if _WIN32
+#ifdef _WIN32
 		// Calculate frame delta time in milliseconds
-		unsigned int frameDeltaTime = clock() - frameStartTime;
-
+		long int frameDeltaTime = clock() - frameStartTime;
+#elif __APPLE__
+        gettimeofday(&frameEndTime, NULL);
+        long int frameDeltaTime = (frameEndTime.tv_sec * 1000 + frameEndTime.tv_usec / 1000) - (frameStartTime.tv_sec * 1000 + frameStartTime.tv_usec / 1000);
+#endif
 		// Adjust FPS to hit target FPS
 		unsigned int fpsTargetMS = 1000 / Globals::FPSLimit;
 		if (frameDeltaTime < fpsTargetMS)
 		{
 			SDL_Delay(fpsTargetMS - frameDeltaTime);
 		}
-#endif // _WIN32
+
 
 	}
 	Unload();

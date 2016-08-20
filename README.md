@@ -14,7 +14,15 @@ Visual Studio 14 2015:
 2. Go into the "GGUI" project "Properties"
 3. Under "General" set "Platform Toolset" to Visual Studio 2013 (v120)
 
+Xcode:
+
+1. Set target to GGUI
+2. Within Scheme set the working directory to be bin/Debug
+3. Within Scheme set the build config to Release
+Note: The debug build config doesnt work
+
 Currently supported/working generators:
 
 - Visual Studio 14 2015
 - Xcode
+

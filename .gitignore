@@ -54,3 +54,4 @@ build/*
 #Content/
 
 bin/Debug/GGUI
+bin/Release/GGUI

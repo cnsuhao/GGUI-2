@@ -4,12 +4,12 @@
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 
-#if __unix__
-	#include <sys/time.h>
-#endif // __unix__
-#if _WIN32
+
+#ifdef _WIN32
 	#include <ctime>
-#endif // _WIN32
+#elif __APPLE__
+    #include <sys/time.h>
+#endif
 
 //#include <thread>
 #include <iostream>
@@ -48,8 +48,11 @@ private:
 	//Variables
 	MainGame	mainGame = MainGame();
 	int			fpscounter = 0, fpslastSec = 0, deltams = 0;
-	double		lastTime = 0.0;
 
+#if _WIN32
+    double		lastTime = 0.0;
+#endif
+    
 	SDL_GLContext glContext;
 
 	PassManager passManager;
