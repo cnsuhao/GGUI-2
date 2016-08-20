@@ -93,8 +93,8 @@ bool GameWindow::Load()
 
 	SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
 //#if __unix__
 //#endif // __unix__
     
@@ -146,8 +146,6 @@ bool GameWindow::Load()
 		return false;
 	}
 
-    cout << "GL VERSION: " << glGetString(GL_VERSION) << endl;
-    
 	//CREATING THE RENDER TARGET
 	passManager = PassManager();
 	if (passManager.Load() == false)
@@ -345,6 +343,12 @@ void GameWindow::Render(ShaderOptions* shader)
 
 	//Swap Buffer
 	SDL_GL_SwapWindow(Globals::gameWindow);
+    /*
+    GLenum err = glGetError();
+    while (err != GL_NO_ERROR) {
+        std::cout << "OpenGL Error: " << err << std::endl;
+    }*/
+    
 }
 
 void GameWindow::Unload()

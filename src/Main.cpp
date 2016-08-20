@@ -6,9 +6,12 @@
 
 int main(int argc, char** argv)
 {
+    for (int i = 0; i < argc; i++) {
+        cout << "Arg " << i << ": " << argv[i] << endl;
+    }
+    
+    
 	std::cout << "Creating application object" << std::endl;
-
-	//Globals::gameWindowObject = GameWindow();
 	GameWindow _window = GameWindow();
 
 	//Globals::gameWindowObject.Run(60.0, 60.0);
