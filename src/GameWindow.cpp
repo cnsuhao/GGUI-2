@@ -92,11 +92,11 @@ bool GameWindow::Load()
 	//SDL_GL_SetAttribute(SDL_GL_MULTISAMPLESAMPLES, Globals::AASamples);
 
 	SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
-#if __unix__
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
-#endif // __unix__
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
+//#if __unix__
+//#endif // __unix__
     
     /*
     cout << Globals::AASamples << endl;
@@ -147,8 +147,6 @@ bool GameWindow::Load()
 	}
 
     cout << "GL VERSION: " << glGetString(GL_VERSION) << endl;
-    SDL_Delay(3000);
-    
     
 	//CREATING THE RENDER TARGET
 	passManager = PassManager();
