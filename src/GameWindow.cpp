@@ -64,7 +64,6 @@ void GameWindow::Run()
 #if _WIN32
 		// Calculate frame delta time in milliseconds
 		unsigned int frameDeltaTime = clock() - frameStartTime;
-#endif // _WIN32
 
 		// Adjust FPS to hit target FPS
 		unsigned int fpsTargetMS = 1000 / Globals::FPSLimit;
@@ -72,6 +71,8 @@ void GameWindow::Run()
 		{
 			SDL_Delay(fpsTargetMS - frameDeltaTime);
 		}
+#endif // _WIN32
+
 	}
 	Unload();
 }

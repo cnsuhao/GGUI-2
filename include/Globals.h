@@ -1,6 +1,7 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+
 #include <SDL2/SDL.h>
 //#include <string>
 #include <glm/glm.hpp>

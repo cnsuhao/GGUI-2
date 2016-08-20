@@ -55,12 +55,11 @@ GLuint loadDDS(const std::string& imagepath)
 
 	FILE *fp;
 
-
-
 	/* try to open the file */
 	fp = fopen(imagepath.c_str(), "rb");
 	if (fp == NULL) {
-		printf("%s could not be opened. Are you in the right directory ? \n", imagepath); getchar();
+        std::cout << imagepath << " could not be opened. Are you in the right directory ? \n";
+        getchar();
 		return 0;
 	}
 

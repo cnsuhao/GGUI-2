@@ -72,8 +72,8 @@ bool PassManager::Load()
 	glFramebufferTexture(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, fbo_textures[1], 0);
 
 	// Set the list of draw buffers.
-	DrawBuffers[0] = { GL_COLOR_ATTACHMENT0 };
-	DrawBuffers[1] = { GL_DEPTH_ATTACHMENT };
+	//DrawBuffers[0] = { GL_COLOR_ATTACHMENT0 };
+    //DrawBuffers[1] = { GL_DEPTH_ATTACHMENT };
 	//glDrawBuffers(1, DrawBuffers); // "1" is the size of DrawBuffers
 
 	// Always check that our framebuffer is     ok
