@@ -177,7 +177,7 @@ bool GameWindow::Load()
 
 	Mesh::LoadGlobally();
 
-    SDL_StartTextInput();
+    //SDL_StartTextInput();
 
 	//Load MainGame
 	mainGame.Load();

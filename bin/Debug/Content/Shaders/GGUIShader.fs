@@ -48,7 +48,7 @@ void main()
 
 
     color =
-      texture2D(diffuse, fontUV) // base color / texture
+      texture(diffuse, fontUV) // base color / texture
       * Opacity; // Opacity application
 
        //Color using fill color
@@ -60,7 +60,7 @@ void main()
   }else{
      // Output color
     color =
-      texture2D(diffuse, UV0) // base color / texture
+      texture(diffuse, UV0) // base color / texture
       * Opacity; // Opacity application
 
 
