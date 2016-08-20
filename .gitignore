@@ -51,6 +51,6 @@ build/*
 *~
 *#
 *.#*
-Content/
+#Content/
 
 bin/Debug/GGUI
