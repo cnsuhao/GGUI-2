@@ -21,7 +21,6 @@ Shader::~Shader()
 std::map<const GLchar*, GLuint> Shader::Load(const std::string & fileName, std::vector<const GLchar*> uniforms)
 {
 	m_program = glCreateProgram();
-	//	std::cout << "Hello!!!!" << std::endl;
 	m_shaders[0] = CreateShader(LoadShader("Content/Shaders/" + fileName + ".vs"), GL_VERTEX_SHADER);
 	m_shaders[1] = CreateShader(LoadShader("Content/Shaders/" + fileName + ".fs"), GL_FRAGMENT_SHADER);
 
