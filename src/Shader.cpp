@@ -94,7 +94,7 @@ std::string Shader::LoadShader(const std::string& fileName)
 	}
 	else
 	{
-		std::cerr << "Unable to load shader: " << fileName << std::endl;
+		std::cout << "Unable to load shader: " << fileName << std::endl;
 	}
 
 	return output;
@@ -126,7 +126,7 @@ GLuint Shader::CreateShader(const std::string& text, unsigned int type)
 	GLuint shader = glCreateShader(type);
 
 	if (shader == 0)
-		std::cerr << "Error compiling shader type " << type << std::endl;
+		std::cout << "Error compiling shader type " << type << std::endl;
 
 	const GLchar* p[1];
 	p[0] = text.c_str();
