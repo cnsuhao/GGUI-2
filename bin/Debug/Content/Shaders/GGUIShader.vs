@@ -1,4 +1,4 @@
-#version 300 es
+#version 410
 //#define M_PI 3.1415926535897932384626433832795
 
 // Input vertex data, different for all executions of this shader.
