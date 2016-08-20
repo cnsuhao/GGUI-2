@@ -4,8 +4,9 @@ High Performance GUI using OpenGL.
 Build instructions:
 
 1.  mkdir build bin
-2.  cd build
-3.  cmake .. -G "*YOUR GENERATOR*"
+2.  cp Content bin/Debug/Content
+3.  cd build
+4.  cmake .. -G "*YOUR GENERATOR*"
 
 Visual Studio 14 2015:
 
@@ -16,3 +17,4 @@ Visual Studio 14 2015:
 Currently supported/working generators:
 
 - Visual Studio 14 2015
+- Xcode
