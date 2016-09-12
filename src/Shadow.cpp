@@ -84,10 +84,13 @@ void Shadow::Update() {
 
 void Shadow::UpdateShadow() {
 	//Define variables
-	float bluramount = 75.0f * _distance;
-	float offset = 5.0f * _distance;
-	float opacity = 0.2f / (float)pow(_distance, 2.0);
-
+    //float bluramount = 7.50f * _distance;
+	//float offset = 0.50f * _distance;
+    float bluramount = 75.0f;
+    float offset = 0.1;
+    float opacity = 0.3f - (_distance/100.0f);
+    //float opacity = 0.2;
+    
 	if (_size.x >= 0.0f && _size.y >= 0.0f) {
 
 		// Center

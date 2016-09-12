@@ -56,7 +56,11 @@ void Pane::Update() {
 		_shadow.setPosition(_rect.getPosition() + glm::vec2(inset));
 		_positionChanged = false;
 	}
-
+    
+    if (_distanceChanged) {
+        _shadow.setDistance(_distance);
+        _rect.setDistance(_distance);
+    }
 
 	_rect.Update();
 	_shadow.Update();

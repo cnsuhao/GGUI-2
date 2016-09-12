@@ -35,7 +35,6 @@ void GameWindow::Run()
 #elif __APPLE__
         struct timeval frameStartTime, frameEndTime;
         gettimeofday(&frameStartTime, NULL);
-        
 #endif
 
 		ProcessInput();
